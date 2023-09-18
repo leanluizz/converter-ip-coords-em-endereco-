@@ -1,0 +1,37 @@
+.box {
+    background-color: var(--color--blue-hover);
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    border-radius: 0px 0px 12px 12px;
+}
+
+.box ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.box h3 {
+    color: white;
+    font-family: 'Kids';
+    text-align: center;
+}
+
+.box ul li {
+    width: 100%;
+    text-align: center;
+}
+
+.box li:hover {
+    background-color: rgb(28, 81, 105);
+    border-bottom: 0.5px solid white;
+}
+
+.box a {
+    font-family: 'Kids';
+    color: white;
+    text-decoration: none;
+}

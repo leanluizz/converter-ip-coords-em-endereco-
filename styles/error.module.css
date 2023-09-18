@@ -1,0 +1,57 @@
+@media (max-width:800px) {
+  .boxError {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .boxError img {
+    max-width: 100%;
+  }
+}
+
+.Overflow {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  justify-content: center;
+  align-items: center;
+  z-index: 6;
+  background-color: rgba(0, 0, 0, 0.651);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.boxError {
+  background-color: white;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 25%;
+  width: 80%;
+  height: 60%;
+  margin: auto;
+  font-family: 'Kids';
+  overflow: scroll;
+}
+
+.boxError li:nth-child(1) {
+  color: black;
+}
+
+.boxError ul li,
+.boxError p {
+  font-size: 2vw;
+  color: red;
+}
+
+.boxError ul {
+  overflow: auto;
+}
+
+.boxError img {
+  width: min-content;
+  height: 60%;
+}

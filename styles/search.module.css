@@ -1,0 +1,97 @@
+.box {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: transparent;
+    width: 90%;
+    height: 100%;
+    overflow: auto;
+}
+
+div .list {
+    font-family: 'Kids';
+    overflow: auto;
+}
+
+.content_blue {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color--blue);
+    width: 100%;
+    height: 15vh;
+}
+
+.input {
+    display: block;
+    margin: auto 0 auto auto;
+    width: 50%;
+    height: 30%;
+    border: 1px solid gray;
+    outline: 0;
+    font-family: "Kids";
+    font-style: italic;
+}
+
+.input::placeholder {
+    color: rgba(128, 128, 128, 0.404);
+}
+
+.button {
+    display: block;
+    font-family: "Kids";
+    font-size: 1rem;
+    color: white;
+    margin: 0 auto 0 1%;
+    background-color: var(--color--blue);
+    border-radius: 100%;
+    border: 4px solid white;
+    height: 3rem;
+}
+
+.button:hover {
+    background-color: var(--color--blue-hover);
+    transform: translateY(-4px);
+    transition: 1s;
+}
+
+.Earth {
+    display: flex;
+    border-radius: 12px 12px 0px 0px;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(11, 47, 71, 0.411);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+@media (max-width:500px) {
+    .input::placeholder {
+        font-size: 2.5vw;
+    }
+}
+
+@media (max-width:850px) {
+    #__next {
+        margin: 0;
+    }
+
+    .gif {
+        width: 50%;
+        height: 50%;
+    }
+
+    div .Earth,
+    div .content_blue {
+        border-radius: 0%;
+        width: 100%;
+    }
+
+    div .Earth {
+        flex-direction: column;
+    }
+}

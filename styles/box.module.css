@@ -1,0 +1,224 @@
+@media (max-width:815px) {
+  div .flex {
+    flex-direction: column;
+  }
+
+  div .boxGPS {
+    margin-bottom: 20%;
+  }
+
+  div .boxGPS,
+  div .boxPerson {
+    position: relative;
+    right: 0%;
+    left: 0%;
+    animation: none;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.container {
+  padding: 0 2rem;
+}
+
+@media (max-width:600px) {
+
+  .boxGPS,
+  .boxPerson {
+    max-width: 100%;
+  }
+
+  div .gps {
+    width: 30%;
+  }
+
+  div #man {
+    width: 25%;
+  }
+}
+
+@keyframes zoop {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100;
+  }
+}
+
+.flex {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.boxPerson {
+  animation: sideRight 2s forwards;
+  animation-delay: 29s;
+  background-color: var(--color--blue);
+  width: 50%;
+  height: 500px;
+  opacity: 0%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 3px;
+  margin-top: 12%;
+  position: relative;
+  right: 25%;
+}
+
+.boxGPS {
+  opacity: 0%;
+  background-color: whitesmoke;
+  width: 50%;
+  height: 500px;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 3px;
+  margin-top: 12%;
+  position: relative;
+  left: 25%;
+}
+
+@keyframes sideRight {
+  0% {
+    position: relative;
+    right: 25%;
+  }
+
+  100% {
+    position: relative;
+    right: 0%;
+  }
+}
+
+.white {
+  background-color: wheat;
+  width: 500px;
+  height: 500px;
+}
+
+@keyframes Bounce {
+
+  0%,
+  20%,
+  50% {
+    transform: scale(0.9, 1);
+  }
+
+  80% {
+    transform: translateY(0);
+    transform: scale(0.7, 1);
+  }
+
+  40% {
+    transform: translateY(-30px);
+  }
+
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes tilt-shaking {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(10deg);
+  }
+
+  30% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  55% {
+    transform: rotate(0eg);
+  }
+
+  75% {
+    transform: rotate(10deg);
+  }
+
+  85% {
+    transform: rotate(0eg);
+  }
+
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+#man {
+  animation: tilt-shaking 1s alternate;
+  animation-delay: 20s;
+  transition: 2s;
+  width: 7.5%;
+}
+
+.gps,
+.gps path {
+  overflow: visible;
+  animation: Bounce 2s alternate;
+  animation-delay: 10s;
+  width: 10%;
+  height: auto;
+  position: relative;
+  bottom: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.gps:hover {
+  animation: Bounce 2s infinite;
+}
+
+#man:hover {
+  animation: tilt-shaking 1s infinite;
+}
+
+@font-face {
+  font-family: Kids;
+  src: url("../styles/fonts/Poppins-ExtraBold.ttf");
+}
+
+.pGPS,
+.h1GPS,
+.h2GPS {
+  overflow: hidden;
+  font-family: "Kids";
+  color: var(--color--blue);
+  text-align: center;
+}
+
+.pGPS:hover,
+.h1GPS:hover,
+.h2GPS:hover {
+  color: var(--color--blue-hover);
+}
+
+.pPerson,
+.h1Person,
+.h2Person {
+  overflow: hidden;
+  font-family: "Kids";
+  color: whitesmoke;
+  text-align: center;
+}
+
+.pPerson:hover,
+.h1Person:hover,
+.h2Person:hover {
+  color: white;
+}

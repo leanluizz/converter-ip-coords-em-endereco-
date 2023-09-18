@@ -1,0 +1,124 @@
+@font-face {
+  font-family: Kids;
+  src: url("../styles/fonts/Poppins-ExtraBold.ttf");
+}
+
+@media (max-width:500px) {
+  h1,
+  h2 {
+    font-size: medium;
+  }
+}
+
+:root {
+  --color--blue: rgb(35, 170, 204);
+  --color--blue-hover: rgb(15, 76, 92);
+}
+
+body {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.test {
+  background-color: white;
+}
+
+p {
+  font-size: small;
+}
+
+li {
+  font-family: "Kids";
+  color: whitesmoke;
+}
+
+.white {
+  background-color: wheat;
+  width: 500px;
+  height: 500px;
+}
+
+@keyframes Sucess {
+  0% {
+    background-color: rgb(27, 231, 27);
+    border: rgb(27, 231, 27) solid 3px;
+    transform: translateX(-3px);
+  }
+
+  50% {
+    background-color: rgb(27, 231, 27);
+    border: rgb(27, 231, 27) solid 3px;
+    transform: translateX(3px);
+  }
+
+  75% {
+    background-color: rgb(27, 231, 27);
+    border: rgb(27, 231, 27) solid 3px;
+    transform: translateX(-3px);
+  }
+
+  100% {
+    background-color: rgb(27, 231, 27);
+    border: rgb(27, 231, 27) solid 3px;
+    transform: translateX(3px);
+  }
+}
+
+@keyframes NoSucess {
+  0% {
+    background-color: rgb(231, 27, 27);
+    border: rgb(231, 27, 27) solid 3px;
+    transform: translateX(-3px);
+  }
+
+  50% {
+    background-color: rgb(231, 27, 27);
+    border: rgb(231, 27, 27) solid 3px;
+    transform: translateX(3px);
+  }
+
+  75% {
+    background-color: rgb(231, 27, 27);
+    border: rgb(231, 27, 27) solid 3px;
+    transform: translateX(-3px);
+  }
+
+  100% {
+    background-color: rgb(231, 27, 27);
+    border: rgb(231, 27, 27) solid 3px;
+    transform: translateX(3px);
+  }
+}
+
+@keyframes Fly {
+  0% {
+    margin-left: 0;
+    display: block;
+
+  }
+
+  100% {
+    margin-left: 105%;
+    height: 2px;
+    width: 1px;
+    display: none;
+  }
+}
+
+.Rocket {
+  animation: Fly 15s forwards;
+  transform: rotate(90deg);
+  height: 190px;
+  width: 180px;
+  margin-top: 20%;
+  margin-left: 105%;
+  margin-right: auto;
+  position: absolute;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

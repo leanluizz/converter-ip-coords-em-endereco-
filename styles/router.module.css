@@ -1,0 +1,29 @@
+.box {
+    background-color: var(--color--blue-hover);
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    border-radius: 0px 0px 12px 12px;
+}
+
+.box ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.box ul li {
+    width: 100%;
+    text-align: center;
+}
+
+.box li:hover {
+    background-color: rgb(28, 81, 105);
+    border-bottom: 0.1px solid white;
+}
+
+.box .map {
+    width: 30%;
+}

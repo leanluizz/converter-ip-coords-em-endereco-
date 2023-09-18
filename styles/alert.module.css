@@ -1,0 +1,51 @@
+@keyframes alert {
+    0% {
+        left: -100%;
+    }
+
+    50% {
+        left: -2%;
+    }
+
+    75% {
+        left: -2%;
+    }
+
+    100% {
+        left: -2%;
+    }
+}
+
+.box {
+    animation: alert 2s alternate;
+    background-color: white;
+    color: var(--color--blue);
+    z-index: 4;
+    font-family: "Kids";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+}
+
+.box h2 {
+    margin-left: 5%;
+}
+
+.box img {
+    width: 20%;
+    height: 30%;
+}
+
+.box button {
+    border-radius: 8px;
+    text-align: center;
+    height: 100%;
+    float: right;
+    font-size: 1.5vw;
+    background-color: red;
+    border: 0;
+    color: white;
+    font-family: 'Kids';
+}
