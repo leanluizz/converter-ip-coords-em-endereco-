@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import Search from "../styles/search.module.css"
 import Astronaut from "../images/astronaut.gif"
 import Image from "next/image"
-import Error from "../components/error.jsx"
+import Error from "./error.jsx"
 import { Context } from "../components/context_component/context.jsx"
 
 export default function a(props) {

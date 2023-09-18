@@ -1,4 +1,3 @@
-import react from "react";
 import box from "../styles/box.module.css";
 import Man from "../images/3dMan.png";
 import Image from "next/image";

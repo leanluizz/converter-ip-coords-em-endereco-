@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import router from "../styles/router.module.css";
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker} from 'react-leaflet'
 import { Context } from "./context_component/context.jsx"
 
 export default function (props) {
