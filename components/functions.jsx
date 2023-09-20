@@ -10,8 +10,8 @@ export default function (props) {
     overflow: "hidden",
     height: "100%",
     width: "100%",
-    "z-index": "3",
-    "margin-bottom": "20%"
+    "zIndex": "3",
+    "marginBottom": "20%"
   }
 
   return (

@@ -26,7 +26,7 @@ export default function NotPermission(){
         <Button className='bg-info' id={Permissions.link}><Link className='text-decoration-none text-light' href="/"><h5>Home</h5></Link></Button>
         <h1 className={Permissions.title} >404 Error</h1>
         <h2 className={Permissions.subtitle}>Please turn on the geolocation permissions</h2>
-        <Image width={200} className='mt-5' src={AstronautFly}></Image>
+        <Image width={200} className='mt-5' alt='astronaut' src={AstronautFly}></Image>
         <div className='text-center'>
         <Button className='bg-info' id={Permissions.link}><Link className='text-light' href="https://support.google.com/chrome/answer/142065?hl=pt-BR&co=GENIE.Platform%3DDesktop">How i turn on and allow geolocation?</Link></Button>
         <Button className='bg-info' id={Permissions.link}><Link className='text-light' href="https://jaimeneeves.medium.com/explorando-a-api-geolocation-em-javascript-um-guia-passo-a-passo-94d332c96f0d">How geolocation use this information?</Link></Button>
