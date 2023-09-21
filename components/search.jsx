@@ -20,8 +20,8 @@ export default function a(props) {
             fetch(`https://nominatim.openstreetmap.org/reverse?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&format=json`)
                 .then(response => response.json())
                 .then(response => setdata(response.address))
-            setLatitude(pos.coords.latitude)
-            setLongitude(pos.coords.longitude)
+            setLatitude(pos.coords.latitude ||"-20.661766351424113")
+            setLongitude(pos.coords.longitude ||"-43.76629044511121")
         }
         navigator.geolocation.getCurrentPosition(geoLoc)
     }, [])

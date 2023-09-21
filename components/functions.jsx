@@ -39,7 +39,11 @@ export default function (props) {
 
   return (
     <div className={router.box}>
-      {Map}
+      try {
+        Map
+      } catch (error) {
+       console.log('Cuzinho preto') 
+      }
     </div>
 
   )
