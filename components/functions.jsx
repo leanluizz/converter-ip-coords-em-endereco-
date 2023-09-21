@@ -37,7 +37,7 @@ export default function (props) {
               <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
-              <Marker position={{ lat: Latitude ? "-27.929368233392843" : Latitude, lng: Longitude ? "-136.17649792979788": Longitude }}></Marker>
+              <Marker position={{ lat: Latitude ? "-27.929368233392843" : (Latitude, console.log("s")), lng: Longitude ? "-136.17649792979788": Longitude }}></Marker>
             </MapContainer>
           );
         } else if (result.state === "denied") {
