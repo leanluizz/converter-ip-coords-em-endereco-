@@ -25,7 +25,7 @@ export default function (props) {
 
         if (result.state === "granted") {
           setMap(
-            <MapContainer
+              <MapContainer
               center={{
                 lat: Latitude ,
                 lng: Longitude

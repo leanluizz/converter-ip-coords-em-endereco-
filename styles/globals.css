@@ -134,3 +134,13 @@ li {
 .superastronaut{
  animation: moveDiagonal 5s infinite ease-in-out;
 }
+@media (max-width: 600px) {
+  #__next div .Rocket{ display: none; }
+}
+details{ text-align: center; }
+summary{
+  font-size: 2rem;
+  background-color: var(--color--blue);
+  color: white;
+  font-family: Kids;
+}

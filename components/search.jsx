@@ -104,7 +104,10 @@ export default function a(props) {
                     <input type="text" className={Search.input} name="query" placeholder="Example: -20.61552081859054, -43.81838967145381  - Latitude/Longitude" />
                     <button className={Search.button}>Go!</button>
                 </form>
+                <details className="bg-primary">
+              <summary>Map</summary>
                 <Functions InputSearch='#Search' />
+                </details>
             </div>
         </Context.Provider>
     )

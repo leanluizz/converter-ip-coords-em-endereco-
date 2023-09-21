@@ -24,9 +24,10 @@ export default () => {
     return (
         <>
         <h1 className='text-light text-center'>An error occurred when rendering please wait while we fix the error...</h1>
-        <h2 className='text-light text-center'>you will be reloaded to the home page in</h2>
+        <h2 className='text-light text-center'>You will be reloaded to the home page in</h2>
         <h2 className='text-light text-center'>{Seconds}</h2>
         <Image className='superastronaut' src={SuperAstronaut} alt='astronaut'/>
+        <h3 className='text-light text-center'>Maybe we need reload one more of sometimes...</h3>
         </>
     )
 }
