@@ -6,7 +6,7 @@ import { Context } from "./context_component/context.jsx"
 export default function (props) {
   const { Latitude, Longitude } = useContext(Context)
   const [Map, setMap] = useState(<></>)
-  setInterval(() => {
+
     if(process.browser){
       if (navigator.permissions.query({ name: "geolocation" }).then((result) => {
         if (result.state === "granted") {
@@ -28,7 +28,7 @@ export default function (props) {
     })) {
     }
     }
-  }, 1000);
+
   const styled = {
     overflow: "hidden",
     height: "100%",
