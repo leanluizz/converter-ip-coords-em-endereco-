@@ -30,8 +30,8 @@ export default function (props) {
           setMap(
             <MapContainer
               center={{
-                lat: Latitude ,
-                lng: Longitude
+                lat: Latitude || "-20.65803188908812",
+                lng: Longitude || "-43.78444363542055"
               }}
               zoom={13}
               scrollWheelZoom={false}
