@@ -125,7 +125,7 @@ li {
 
 @keyframes moveDiagonal {
   from {
-    transform: translateY(200%) translateX(500%);
+    transform: translateY(200%) translateX(100%);
   }
   to {
     transform: translateY(-100%) translateX(-100%);
