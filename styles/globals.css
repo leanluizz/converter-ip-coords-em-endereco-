@@ -136,6 +136,7 @@ li {
 }
 @media (max-width: 600px) {
   #__next div .Rocket{ display: none; }
+  .superastronaut{display: none;}
 }
 details{ text-align: center; }
 summary{
