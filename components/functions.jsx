@@ -4,7 +4,7 @@ import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import { Context } from "./context_component/context.jsx";
 
 export default function (props) {
-  const { Latitude, Longitude } = useContext(Context);
+  let { Latitude, Longitude } = useContext(Context);
   const [Map, setMap] = useState(null);
   const [permissionDenied, setPermissionDenied] = useState(false);
   const styled = {
@@ -27,8 +27,8 @@ export default function (props) {
           setMap(
             <MapContainer
               center={{
-                lat: Latitude = undefined ?  console.log('sim') : console.log('não'),
-                lng: Longitude = undefined ?  console.log('sim') : console.log('não'),
+                lat: Latitude = undefined ?  console.log('sim') : Latitude,
+                lng: Longitude = undefined ?  console.log('sim') : Longitude,
               }}
               zoom={13}
               scrollWheelZoom={false}
