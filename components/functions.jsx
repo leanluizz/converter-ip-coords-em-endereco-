@@ -27,8 +27,8 @@ export default function (props) {
           setMap(
             <MapContainer
               center={{
-                lat: Latitude,
-                lng: Longitude,
+                lat: Latitude = undefined ?  console.log('sim') : console.log('não'),
+                lng: Longitude = undefined ?  console.log('sim') : console.log('não'),
               }}
               zoom={13}
               scrollWheelZoom={false}
