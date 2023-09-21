@@ -4,14 +4,14 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { useEffect, useState } from 'react'
 
 export default () => {
-    const [Seconds, setSeconds] = useState(10);
+    const [Seconds, setSeconds] = useState(10); // time
     
     useEffect(() => {
         const interval = setInterval(() => {
             setSeconds(prevSeconds => {
                if (prevSeconds == 0) {
                 clearInterval(interval)
-                location.replace('/')
+                location.replace('/') //try reload sometimes
                 return null
                }else{ return prevSeconds - 1 }
             });
