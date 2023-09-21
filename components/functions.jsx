@@ -5,8 +5,7 @@ import { Context } from "./context_component/context.jsx";
 
 export default function (props) {
   let { Latitude, Longitude } = useContext(Context);
-  Latitude = undefined ?  console.log('sim') : Latitude
-   Longitude = undefined ?  console.log('sim') : Longitude
+
 
   const [Map, setMap] = useState(null);
   const [permissionDenied, setPermissionDenied] = useState(false);
