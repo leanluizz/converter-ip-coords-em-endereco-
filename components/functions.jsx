@@ -37,7 +37,7 @@ export default function (props) {
               <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
-              <Marker position={{ lat: Latitude ? Latitude: location.replace('/404') , lng: Longitude ? Longitude : location.replace('/404') }}></Marker>
+              <Marker position={{ lat: Latitude ? Latitude: location.replace('/Rendering_error') , lng: Longitude ? Longitude : location.replace('/Rendering_error') }}></Marker>
             </MapContainer>
           );
         } else if (result.state === "denied") {
