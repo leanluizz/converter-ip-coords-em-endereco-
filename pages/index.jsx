@@ -8,16 +8,18 @@ import Rocket from "../images/rocket.gif";
 
 export default function Home() {
 
-if(process.browser){
-  if (navigator.permissions.query({ name: "geolocation" }).then((result) => {
-    if (result.state === "granted") {
-        null
-    } else if (result.state === 'denied') {
-      location.replace('/404')
+  setInterval(() => {
+    if(process.browser){
+      if (navigator.permissions.query({ name: "geolocation" }).then((result) => {
+        if (result.state === "granted") {
+            null
+        } else if (result.state === 'denied') {
+          location.replace('/404')
+        }
+    })) {
     }
-})) {
-}
-}
+    }
+  }, 1000);
 
   const code = () => {
 
