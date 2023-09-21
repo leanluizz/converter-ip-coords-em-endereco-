@@ -11,7 +11,7 @@ export default () => {
             setSeconds(prevSeconds => {
                if (prevSeconds == 0) {
                 clearInterval(interval)
-                location.replace('/') //try reload sometimes
+                location.replace('/404') //try reload sometimes
                 return null
                }else{ return prevSeconds - 1 }
             });
