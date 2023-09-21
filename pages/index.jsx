@@ -16,7 +16,6 @@ if(process.browser){
       location.replace('/404')
     }
 })) {
-
 }
 }
 
