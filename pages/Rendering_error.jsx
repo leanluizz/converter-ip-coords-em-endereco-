@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { useEffect, useState } from 'react'
 
 export default () => {
-    const [Seconds, setSeconds] = useState(15);
+    const [Seconds, setSeconds] = useState(30);
     
     useEffect(() => {
         const interval = setInterval(() => {
