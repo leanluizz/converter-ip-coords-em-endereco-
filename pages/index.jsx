@@ -7,19 +7,18 @@ import Flex from "../components/flex.jsx";
 import Rocket from "../images/rocket.gif";
 
 export default function Home() {
-  let { Latitude, Longitude } = useContext(Context);
-  console.log(Latitude, Longitude);
+
   setInterval(() => {
     if(process.browser){
-      if (navigator.permissions.query({ name: "geolocation" }).then((result) => {
-        if (result.state === "granted") {
-            null
-        } else if (result.state === 'denied') {
-          location.replace('/404')
-        }
-    })) {
+  if (navigator.permissions.query({ name: "geolocation" }).then((result) => {
+    if (result.state === "granted") {
+        null
+    } else if (result.state === 'denied') {
+      location.replace('/404')
     }
-    }
+})) {
+}
+}
   }, 1000);
 
   const code = () => {

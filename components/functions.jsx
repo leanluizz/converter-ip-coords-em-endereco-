@@ -5,8 +5,6 @@ import { Context } from "./context_component/context.jsx";
 
 export default function (props) {
   let { Latitude, Longitude } = useContext(Context);
-
-
   const [Map, setMap] = useState(null);
   const [permissionDenied, setPermissionDenied] = useState(false);
   const styled = {
@@ -29,8 +27,8 @@ export default function (props) {
           setMap(
             <MapContainer
               center={{
-                lat: Latitude || "-20.65803188908812",
-                lng: Longitude || "-43.78444363542055"
+                lat: Latitude ,
+                lng: Longitude
               }}
               zoom={13}
               scrollWheelZoom={false}
@@ -39,7 +37,7 @@ export default function (props) {
               <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
-              <Marker position={{ lat: Latitude, lng: Longitude }}></Marker>
+              <Marker position={{ lat: Latitude ? console.log('s') : console.log('n'), lng: Longitude }}></Marker>
             </MapContainer>
           );
         } else if (result.state === "denied") {
