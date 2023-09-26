@@ -1,34 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+**Documentação do Site de Geolocalização**
 
-## Getting Started
+Este documento descreve um site que permite a transformação de coordenadas e endereços IP em informações de geolocalização, utilizando as APIs NeoIPfy, Nominatim e Leaflet.
 
-First, run the development server:
+### Visão Geral
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+O site de geolocalização é uma plataforma que oferece aos usuários a capacidade de obter informações de geolocalização com base em coordenadas geográficas ou endereços IP. A plataforma integra três serviços principais: NeoIPfy, Nominatim e Leaflet.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Funcionalidades Principais
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+1. **Transformação de Coordenadas:** Os usuários podem inserir coordenadas geográficas (latitude e longitude) e obter informações detalhadas de geolocalização, como país, estado, cidade e endereço.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+2. **Consulta de Endereço IP:** Os usuários podem inserir um endereço IP e obter informações sobre a localização geográfica associada, incluindo país, cidade e coordenadas aproximadas.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+3. **Mapa Interativo:** O site incorpora um mapa interativo usando a biblioteca Leaflet, que exibe as informações de geolocalização em um mapa.
 
-## Learn More
+### Integração com APIs
 
-To learn more about Next.js, take a look at the following resources:
+O site faz uso das seguintes APIs:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **NeoIPfy API:**
+   - A API NeoIPfy é utilizada para consulta de informações de geolocalização com base em endereços IP.
+   - Os usuários inserem um endereço IP, e o site envia uma solicitação para a NeoIPfy API, que retorna dados de localização, incluindo país, cidade e coordenadas.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+2. **Nominatim API:**
+   - A API Nominatim é usada para transformar coordenadas geográficas em informações de endereço.
+   - Os usuários inserem coordenadas, e o site envia uma solicitação para a Nominatim API, que retorna informações detalhadas de geolocalização.
 
-## Deploy on Vercel
+3. **Leaflet (Biblioteca):**
+   - A biblioteca Leaflet é incorporada ao site para exibir as informações de geolocalização em um mapa interativo.
+   - Os dados obtidos das APIs são marcados no mapa, proporcionando uma representação visual dos resultados.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Fluxo de Uso
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. **Consulta de Coordenadas:**
+   - O usuário insere as coordenadas geográficas (latitude e longitude) na interface.
+   - O site envia uma solicitação para a API Nominatim, que retorna informações de endereço.
+   - As informações de geolocalização são exibidas na interface, incluindo país, estado, cidade e endereço.
+   - As coordenadas são marcadas no mapa Leaflet.
+
+2. **Consulta de Endereço IP:**
+   - O usuário insere um endereço IP na interface.
+   - O site envia uma solicitação para a API NeoIPfy, que retorna informações de geolocalização.
+   - As informações de geolocalização são exibidas na interface, incluindo país, cidade e coordenadas aproximadas.
+   - A localização é marcada no mapa Leaflet.
+
+3. **Mapa Interativo:**
+   - O mapa Leaflet permite que os usuários interajam com os resultados de geolocalização.
+   - Os marcadores no mapa fornecem informações adicionais ao serem clicados.
+
+### Requisitos Técnicos
+
+- Linguagens de Programação: HTML, CSS, JavaScript/jQuery.
+- Bibliotecas/Frameworks: Leaflet.
+- APIs Externas: NeoIPfy API, Nominatim API.
+- Hospedagem: O site deve ser hospedado em um servidor web acessível publicamente.
+
+### Considerações Finais
+
+Este site de geolocalização oferece uma maneira eficaz de transformar coordenadas geográficas e endereços IP em informações de localização, proporcionando aos usuários uma experiência interativa e informativa. Certifique-se de configurar as chaves de API apropriadas e implementar medidas de segurança para proteger os dados do usuário.
