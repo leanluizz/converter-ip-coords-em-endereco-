@@ -58,3 +58,9 @@ O site faz uso das seguintes APIs:
 ### Considerações Finais
 
 Este site de geolocalização oferece uma maneira eficaz de transformar coordenadas geográficas e endereços IP em informações de localização, proporcionando aos usuários uma experiência interativa e informativa. Certifique-se de configurar as chaves de API apropriadas e implementar medidas de segurança para proteger os dados do usuário.
+
+### Contato
+
+email: luizzleandro827@gmail.com
+
+linkedin: [linkedin](https://www.linkedin.com/in/leandroluizz/)
