@@ -8,7 +8,7 @@ export default function a(props) {
   const { Modal, setModal } = useContext(Context)
   const ModalOn = () => setModal()
 
-  process.browser ? document.body.addEventListener('click', () => setModal('')) : null
+  process.browser ? document.body.addEventListener('click', () => !Modal) : null
   
   return (
     <div className={CSS.Overflow} onClick={ModalOn}>
