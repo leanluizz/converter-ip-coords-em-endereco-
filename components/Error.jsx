@@ -7,13 +7,13 @@ import { Context } from "./context_component/context.jsx"
 export default function a(props) {
   const { Modal, setModal } = useContext(Context)
   const ModalOn = () => setModal()
-
+  const [StyleModal, setStyleModal] = useState(CSS.Overflow)
   process.browser ? document.body.addEventListener('click', () => {
-    setModal(null);
+    setStyleModal(null);
   }) : null
   
   return (
-    <div className={CSS.Overflow} onClick={ModalOn}>
+    <div className={StyleModal} onClick={ModalOn}>
       <div className={CSS.boxError}>
         <Image src={AstronautaError} alt="ErrorSearching" />
         <ul type="none">
