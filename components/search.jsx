@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Search from "../styles/search.module.css";
 import Astronaut from "../images/astronaut.gif";
 import Image from "next/image";
-import Error from "./error.jsx";
+import Error from "./Error.jsx";
 import router from "../styles/router.module.css";
 import dynamic from "next/dynamic"; // Importe a função dynamic
 
