@@ -10,7 +10,7 @@ export default function a(props) {
   
   setTimeout(function() {
     location.reload();
-}, 3000);
+}, 5000);
 
   return (
     <div className={CSS.Overflow} onClick={ModalOn}>
