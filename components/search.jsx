@@ -1,11 +1,21 @@
 import { useEffect, useState } from "react";
-const Functions = dynamic(() => import('../components/functions.jsx'), { ssr: false })
 import dynamic from "next/dynamic";
 import Search from "../styles/search.module.css"
 import Astronaut from "../images/astronaut.gif"
 import Image from "next/image"
 import Error from "./Error.jsx"
 import { Context } from "../components/context_component/context.jsx"
+
+// Importe o MapContainer dinamicamente usando a função dynamic
+const MapContainer = dynamic(() => import("react-leaflet").then((module) => module.MapContainer), {
+  ssr: false, // Isso garante que a renderização ocorra apenas no lado do cliente
+});
+const TileLayer = dynamic(() => import("react-leaflet").then((module) => module.TileLayer), {
+    ssr: false, // Isso garante que a renderização ocorra apenas no lado do cliente
+  });
+  const Marker = dynamic(() => import("react-leaflet").then((module) => module.Marker), {
+    ssr: false, // Isso garante que a renderização ocorra apenas no lado do cliente
+  });
 
 export default function a(props) {
     let Keys = []
@@ -106,7 +116,33 @@ export default function a(props) {
                 </form>
                 <details className="bg-primary">
               <summary>Map</summary>
-                <Functions InputSearch='#Search' />
+                <div className={router.box}>
+        <MapContainer
+          center={{
+            lat: Latitude,
+            lng: Longitude,
+          }}
+          zoom={13}
+          scrollWheelZoom={false}
+          style={{
+            overflow: "hidden",
+            height: "100%",
+            width: "100%",
+            zIndex: "3",
+            marginBottom: "20%",
+          }}
+        >
+          <TileLayer
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker
+            position={{
+              lat: Latitude,
+              lng: Longitude,
+            }}
+          ></Marker>
+        </MapContainer>
+  </div>
                 </details>
             </div>
         </Context.Provider>
