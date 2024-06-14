@@ -5,6 +5,7 @@ import Astronaut from "../images/astronaut.gif"
 import Image from "next/image"
 import Error from "./Error.jsx"
 import { Context } from "../components/context_component/context.jsx"
+import router from "../styles/router.module.css";
 
 // Importe o MapContainer dinamicamente usando a função dynamic
 const MapContainer = dynamic(() => import("react-leaflet").then((module) => module.MapContainer), {
