@@ -7,19 +7,20 @@ import { Context } from "./context_component/context.jsx"
 export default function a(props) {
   const { Modal, setModal } = useContext(Context)
   const ModalOn = () => setModal()
-  const [StyleModal, setStyleModal] = useState(CSS.Overflow)
-  process.browser ? document.body.addEventListener('click', () => {
-    setStyleModal(null);
-  }) : null
   
+  setTimeout(function() {
+    location.reload();
+}, 3000);
+
   return (
-    <div className={StyleModal} onClick={ModalOn}>
+    <div className={CSS.Overflow} onClick={ModalOn}>
       <div className={CSS.boxError}>
         <Image src={AstronautaError} alt="ErrorSearching" />
         <ul type="none">
           <li>{props.error} <p>Não é uma pesquisa válida, tente usar estes modelos</p></li>
           <li>{props.IPError}</li>
           <li>{props.CoordsError}</li>
+          <li>Recarregando a página...</li>
         </ul>
       </div>
     </div>
