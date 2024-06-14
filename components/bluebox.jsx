@@ -9,7 +9,6 @@ export default function () {
         var [more, setmore] = useState(0);
 
         const div = document.querySelectorAll("div");
-        console.log(div)
         useEffect(() => {
             setTimeout(() => {
                 const animationBoxPerson = setInterval(() => {
