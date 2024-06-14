@@ -8,6 +8,8 @@ export default function a(props) {
   const { Modal, setModal } = useContext(Context)
   const ModalOn = () => setModal()
 
+  process.browser ? document.body.addEventListener('click', () => setModal(false)) : null
+  
   return (
     <div className={CSS.Overflow} onClick={ModalOn}>
       <div className={CSS.boxError}>
